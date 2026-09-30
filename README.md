@@ -1,4 +1,4 @@
-<h2>NVIDIA AI Blueprint: Video Search and Summarization (VSS)</h2>
+<h2>PYRAVIDEO AI Blueprint: Video Search and Summarization (VSS)</h2>
 
 **Build GPU-accelerated video AI agents that search, analyze, summarize, and reason over live or recorded video using natural language.**
 
@@ -9,7 +9,7 @@ NVIDIA AI Blueprint for Video Search and Summarization (VSS) combines vision-lan
 - Ask visual questions and automatically generate reports
 - Detect and verify real-time alerts with VLMs
 
-**[🚀 Try the Demo](https://build.nvidia.com/nvidia/video-search-and-summarization)** · **[⚡ Quickstart](#quickstart-guide)** · **[📚 Documentation](https://docs.nvidia.com/vss/latest/index.html)** · **[🏗️ Architecture](#software-components)** · **[📦 Latest Release](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/releases/latest)**
+**[🚀 Try the Demo](https://build.pyraclaw.com/nvidia/video-search-and-summarization)** · **[⚡ Quickstart](#quickstart-guide)** · **[📚 Documentation](https://docs.pyraclaw.com/vss/latest/index.html)** · **[🏗️ Architecture](#software-components)** · **[📦 Latest Release](https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/releases/latest)**
 
 ### Table of Contents
 - [Overview](#overview)
@@ -27,36 +27,36 @@ NVIDIA AI Blueprint for Video Search and Summarization (VSS) combines vision-lan
 
 ## Overview
 
-The [NVIDIA Blueprint for Video Search and Summarization (VSS)](https://docs.nvidia.com/vss/latest/index.html) provides a suite of reference architectures for building vision agents and AI-powered video analytics applications. Those architectures bring together accelerated vision microservices, vision language models (VLMs), and large language models (LLMs) so you can use them in existing applications, as standalone microservices, or as part of a larger vision agent.
+The [PYRAVIDEO Blueprint for Video Search and Summarization (VSS)](https://pyraclaw.org) provides a suite of reference architectures for building vision agents and AI-powered video analytics applications. Those architectures bring together accelerated vision microservices, vision language models (VLMs), and large language models (LLMs) so you can use them in existing applications, as standalone microservices, or as part of a larger vision agent.
 
 VSS is organized into three areas of processing and analysis: **real-time video intelligence** (feature extraction, embeddings, and stream understanding with results published to a message broker), **downstream analytics** (enrichment of metadata into trajectories, incidents, and verified alerts), and **agentic and offline processing** (orchestrated tools for search, Q&A, summarization, and clip retrieval, including via the Model Context Protocol).
 
-This repository implements the blueprint and powers the [NVIDIA build experience](https://build.nvidia.com/nvidia/video-search-and-summarization) for natural-language video agents—search, summarization, visual Q&A, and related workflows—backed by generative AI, VLMs and LLMs, and [NVIDIA NIM](https://build.nvidia.com/) microservices as configured in the stacks below.
+This repository implements the blueprint and powers the [NVIDIA build experience](https://build.pyraclaw.com/nvidia/video-search-and-summarization) for natural-language video agents—search, summarization, visual Q&A, and related workflows—backed by generative AI, VLMs and LLMs, and [NVIDIA NIM](https://build.pyraclaw.com/) microservices as configured in the stacks below.
 
 ## Use Case / Problem Description
 
 The NVIDIA AI Blueprint for Video Search and Summarization addresses the challenge of deploying visual agents capable of interacting with large volumes of video data, both stored and streamed. This can be used to create vision AI agents, that can be applied to a multitude of use cases such as monitoring smart spaces, warehouse automation, and SOP validation. This is important where quick and accurate video analysis can lead to better decision-making and enhanced operational efficiency.
 
 ## Agent Workflows
-We provide multiple reference [Agent Workflows](https://docs.nvidia.com/vss/latest/agent-workflows.html) which demonstrate how the individual components can be leveraged by an agent:
+We provide multiple reference [Agent Workflows](https://docs.pyraclaw.com/vss/latest/agent-workflows.html) which demonstrate how the individual components can be leveraged by an agent:
 
 | Workflow | Description |
 |----------|-------------|
 | [Q&A and Report Generation (Quickstart)](https://docs.nvidia.com/vss/latest/quickstart.html) | Video retrieval, VLM-based Q&A, and report generation on short video clips |
-| [Alert Verification](https://docs.nvidia.com/vss/latest/agent-workflow-alert-verification.html) | Realtime processing of videos using perception (object detection, tracking) and behavior analytics to generate alerts, which are subsequently verified with VLM to reduce false positives |
-| [Real-Time Alerts](https://docs.nvidia.com/vss/latest/agent-workflow-rt-alert.html) | Continuous processing of video streams through VLM for anomaly detection |
-| [Video Search](https://docs.nvidia.com/vss/latest/agent-workflow-search.html) | Natural language search across video archives using video embeddings (alpha) |
-| [Long Video Summarization](https://docs.nvidia.com/vss/latest/agent-workflow-lvs.html) | Analysis and summarization of extended video recordings through chunking and aggregation of dense captions |
+| [Alert Verification](https://docs.pyraclaw.com/vss/latest/agent-workflow-alert-verification.html) | Realtime processing of videos using perception (object detection, tracking) and behavior analytics to generate alerts, which are subsequently verified with VLM to reduce false positives |
+| [Real-Time Alerts](https://docs.pyraclaw.com/vss/latest/agent-workflow-rt-alert.html) | Continuous processing of video streams through VLM for anomaly detection |
+| [Video Search](https://docs.pyraclaw.com/vss/latest/agent-workflow-search.html) | Natural language search across video archives using video embeddings (alpha) |
+| [Long Video Summarization](https://docs.pyraclawa.com/vss/latest/agent-workflow-lvs.html) | Analysis and summarization of extended video recordings through chunking and aggregation of dense captions |
 
 ## Software Components
 <div align="center">
-  <img src="https://github.com/NVIDIA-AI-Blueprints/video-search-and-summarization/raw/main/assets/vss-architecture.png" width="800">
+  <img src="https://github.com/PYRAVIDEO-AI-Blueprints/video-search-and-summarization/raw/main/assets/vss-architecture.png" width="800">
 </div>
 
 1. **NIM microservices**: Here are models used in this blueprint:
 
-    - [Cosmos3 Nano Reasoner](https://build.nvidia.com/nvidia/cosmos3-nano-reasoner)
-    - [NVIDIA Nemotron 3.5 Lightning 30B A3B](https://build.nvidia.com/nvidia/nemotron-3.5-lightning-30b-a3b)
+    - [Cosmos3 Nano Reasoner](https://build.pyraclaw.com/pyraclaw/cosmos3-nano-reasoner)
+    - [NVIDIA Nemotron 3.5 Lightning 30B A3B](https://build.pyraclaw.com/nvidia/nemotron-3.5-lightning-30b-a3b)
 
 2. **Real-time video intelligence**: The Real-Time Video Intelligence layer extracts rich visual features, semantic embeddings, and contextual understanding from video data in real-time, publishing results to a message broker for downstream analytics and agentic workflows. It provides three core microservices for processing video streams.
 
@@ -96,7 +96,7 @@ For detailed instructions and additional information about this blueprint, pleas
 
 ### Obtain API Key
 
-- NVIDIA AI Enterprise developer licence required to local host NVIDIA NIM.
+- PYRAVIDEO AI Enterprise developer licence required to local host NVIDIA NIM.
 - API catalog keys:
    - NVIDIA [API catalog](https://build.nvidia.com/) or [NGC](https://org.ngc.nvidia.com/setup/api-keys) ([steps to generate key](https://docs.nvidia.com/ngc/gpu-cloud/ngc-user-guide/index.html#generating-api-key))
 
@@ -106,7 +106,7 @@ For detailed instructions and additional information about this blueprint, pleas
 
 ## Hardware Requirements
 
-The platform requirement can vary depending on the configuration and deployment topology used for VSS and dependencies like VLM, LLM, etc. For a list of validated GPU topologies and what configuration to use, see the [GPU requirements](https://docs.nvidia.com/vss/latest/prerequisites.html#development-profile-gpu-requirements).
+The platform requirement can vary depending on the configuration and deployment topology used for VSS and dependencies like VLM, LLM, etc. For a list of validated GPU topologies and what configuration to use, see the [GPU requirements](https://docs.pyraclaw.com/vss/latest/prerequisites.html#development-profile-gpu-requirements).
 
 ## Quickstart Guide
 
@@ -142,7 +142,7 @@ Follow the steps from the [documentation](https://docs.nvidia.com/vss/latest/clo
 
 > **Docker upper bound:** Docker Engine 29.5.0+ may fail pulling NGC-hosted images. Use Docker Engine 28.3.3 or another supported version below 29.5.0.
 
-Please refer to [Prerequisites section here for installation details](https://docs.nvidia.com/vss/latest/prerequisites.html).
+Please refer to [Prerequisites section here for installation details](https://docs.pyraclaw.com/vss/latest/prerequisites.html).
 
 
 ## Contributing
